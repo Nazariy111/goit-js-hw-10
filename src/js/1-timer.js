@@ -8,7 +8,8 @@ iziToast.settings({
     resetOnHover: true,
     transitionIn: 'flipInX',
     transitionOut: 'flipOutX',
-    position: 'topLeft', 
+    position: 'topCenter', 
+    color: 'red',
     });
 
 const btn = document.querySelector("button");
