@@ -11,33 +11,33 @@
   <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
   <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
   <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
-  <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-064f51a1.css">
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-5bf9a972.css">
 </head>
 
-<body>
+<body class="snack-body">
   <section>
     <a class="menu-link" href="./index.html">Go back</a>
   </section>
 
   <form class="form">
-    <label>
+    <label class="label-first">
       Delay (ms)
       <input type="number" name="delay" required />
     </label>
   
     <fieldset>
       <legend>State</legend>
-      <label>
+      <label class="label-second">
         <input type="radio" name="state" value="fulfilled" required />
         Fulfilled
       </label>
-      <label>
+      <label class="label-second">
         <input type="radio" name="state" value="rejected" required />
         Rejected
       </label>
     </fieldset>
   
-    <button type="submit">Create notification</button>
+    <button class="snack-btn" type="submit">Create notification</button>
   </form>
 
   
