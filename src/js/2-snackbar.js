@@ -10,8 +10,10 @@ iziToast.settings({
 
 const form = document.querySelector(".form");
 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const delay = e.currentTarget.elements.delay.value;
     const promiseStatus = e.currentTarget.elements.state.value;
     const promise = createPromise(delay, promiseStatus);
@@ -20,22 +22,27 @@ form.addEventListener('submit', (e) => {
         .then((delay) => {
             iziToast.show({
                 timeout: 5000,
-                color: 'green',
+                color: '#59A10D',
                 messageColor: 'white',
+                titleColor: '#FFFFFF',
+                iconColor: '#FFFFFF',
                 message: `✅ Fulfilled promise in ${delay}ms       `,
             });
         })
         .catch((delay) => {
-            iziToast.error({
+            iziToast.show({
                 timeout: 5000,
-                color: 'red',
+                color: '#d11804',
                 messageColor: 'white',
+                titleColor: '#FFFFFF',
+                iconColor: '#FFFFFF',
                 message: `❌ Rejected promise in ${delay}ms        `,
             });
         });
     
     form.reset();
 });
+
 
 function createPromise(delay, promiseStatus) {
     const promise = new Promise((resolve, reject) => {

@@ -9,30 +9,30 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body>
+<body class="snack-body">
   <section>
     <a class="menu-link" href="./index.html">Go back</a>
   </section>
 
   <form class="form">
-    <label>
+    <label class="label-first">
       Delay (ms)
       <input type="number" name="delay" required />
     </label>
   
     <fieldset>
       <legend>State</legend>
-      <label>
+      <label class="label-second">
         <input type="radio" name="state" value="fulfilled" required />
         Fulfilled
       </label>
-      <label>
+      <label class="label-second">
         <input type="radio" name="state" value="rejected" required />
         Rejected
       </label>
     </fieldset>
   
-    <button type="submit">Create notification</button>
+    <button class="snack-btn" type="submit">Create notification</button>
   </form>
 
   <script src="./js/2-snackbar.js" type="module"></script>
