@@ -17,7 +17,7 @@ iziToast.settings({
     });
 
 
-const btn = document.querySelector("button");
+const startBtn = document.querySelector("button");
 const days = document.querySelector("[data-days]");
 const hours = document.querySelector("[data-hours]");
 const minutes = document.querySelector("[data-minutes]");
@@ -42,11 +42,11 @@ const options = {
                 title: 'Error',
                 message: 'Please choose a date in the future',
             });
-            btn.classList.remove("isActive");
-            btn.removeEventListener("click", timerFunction);
+            startBtn.classList.remove("isActive");
+            startBtn.removeEventListener("click", timerFunction);
         } else { 
-            btn.classList.add("isActive");
-            btn.addEventListener("click", timerFunction);
+            startBtn.classList.add("isActive");
+            startBtn.addEventListener("click", timerFunction);
         };
     },
 };
@@ -56,7 +56,7 @@ flatpickr("#datetime-picker", options);
 
 
 function timerFunction() {
-    btn.classList.remove("isActive");
+    startBtn.classList.remove("isActive");
 
     setInterval(() => {
         const nowDate = Date.now();
